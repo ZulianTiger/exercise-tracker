@@ -12,6 +12,7 @@ export const ListContainer = styled.div`
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    flex-direction: column;
 `
 export const Button = styled.button`
     height: 50px;
