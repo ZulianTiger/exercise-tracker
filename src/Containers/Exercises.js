@@ -1,13 +1,26 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import {
+    Container,
+    ListContainer,
+    Button,
+    ButtonText,
+} from './Styles/Exercises'
 
 export default class Exercises extends Component {
 
     render() {
         return (
-            <div>
-                exercises
-            </div>
+            <Container>
+                <ListContainer>
+                    <Button>
+                        <ButtonText onClick={() => {
+                            console.log('test');
+                        }}>
+                            GET EXERCISES
+                        </ButtonText>
+                    </Button>
+                </ListContainer>
+            </Container>
         )
     }
 }

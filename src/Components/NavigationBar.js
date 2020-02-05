@@ -12,14 +12,14 @@ export default class NavigationBar extends Component {
         return (
             <NavigationContainer>
                 <NavLinkContainer>
-                    <Link to={'/'}>
+                    <Link style={{textDecoration: 'none'}} to={'/'}>
                         <NavLinkText>
                             Exercises
                         </NavLinkText>
                     </Link>
                 </NavLinkContainer>
                 <NavLinkContainer>
-                    <Link to={'/users'}>
+                    <Link style={{textDecoration: 'none'}} to={'/users'}>
                         <NavLinkText>
                             Users
                         </NavLinkText>
