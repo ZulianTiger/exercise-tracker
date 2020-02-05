@@ -16,7 +16,8 @@ export const ListContainer = styled.div`
 `
 export const Button = styled.button`
     height: 50px;
-    width: 300px;
+    width: 20%;
+    margin-left: 40%;
     border-radius: 4px;
     background-color: #247ba0;
     border-width: 0px;

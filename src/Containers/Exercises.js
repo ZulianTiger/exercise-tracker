@@ -5,12 +5,13 @@ import {
     Button,
     ButtonText,
 } from './Styles/Exercises'
+import SingleExercise from '../Components/SingleExercise'
 
 export default class Exercises extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            exercises: null,
+            exercises: [],
         }
     }
 
@@ -25,13 +26,22 @@ export default class Exercises extends Component {
                             })
                                 .then(res => res.json())
                                 .then(json => {
-                                    this.setState({exercises: json});
+                                    this.setState({ exercises: json });
                                 });
                         }}>
                             GET EXERCISES
                         </ButtonText>
                     </Button>
-                    Exercises list: {JSON.stringify(this.state.exercises)}
+                    {this.state.exercises.map(exercise => (
+                        <SingleExercise
+                            key={exercise._id}
+                            id={exercise._id}
+                            username={exercise.username}
+                            description={exercise.description}
+                            duration={exercise.duration}
+                            date={exercise.date}
+                        />
+                    ))}
                 </ListContainer>
             </Container>
         )
